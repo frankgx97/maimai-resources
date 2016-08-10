@@ -1,0 +1,732 @@
+@import url();
+
+
+/*------------------------------------*\
+#RESET
+\*------------------------------------*/
+.night-tabs a,
+.night-tabs div,
+.night-tabs em,
+.night-tabs img,
+.night-tabs ul,
+.night-tabs label,
+.night-tabs li,
+.night-tabs ol,
+.night-tabs p,
+.night-tabs span,
+.night-tabs ul {
+/* ->>> Structure <<<-*/
+border: 0;
+margin: 0;
+padding: 0;
+position: relative;
+box-sizing: border-box /* CSS3 */
+}
+
+
+
+
+
+/*------------------------------------*\
+#TAB LABELS
+\*------------------------------------*/
+.night-tabs {
+/* ->>> Structure <<<-*/
+margin: 0 auto; /* Center Night Tabs; optional. */
+width: 1100; /* Define width. */
+font: 300 0px/1.5
+"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; /* Typography */
+color: #000 /* Colors */
+}
+
+.night-tabs input {display: none} /* Hide Checkbox. */
+.night-tabs input:checked+label {cursor: default} /* Set cursor type. */
+
+.night-tabs label {
+/* ->>> Structure <<<-*/
+display: inline-block;
+z-index: 1;
+border-bottom: 2px solid #C2CED1;
+border-right: 1px solid #444;
+border-left: 2px solid #6c7a89;
+/* ->>> Typography <<<-*/
+cursor: pointer;
+font-size: 18px;
+line-height: 40px;
+text-align: left;
+/* ->>> CSS3 <<<-*/
+-webkit-user-select: none; /* ->>> Prevents double-click selection. <<<-*/
+-moz-user-select: none;
+-ms-user-select: none
+}
+.night-tabs label span {
+display: block;
+padding: .2em;
+background: #ecf0f1
+}
+.night-tabs label span span {
+/* Structure */
+border: 2px solid transparent;
+padding: 0 1em;
+/* CSS3*/
+-webkit-transition: background .4s;
+transition: background .4s
+}
+
+
+
+
+
+
+/*------------------------------------*\
+#TAB CONTENT
+\*------------------------------------*/
+.night-tabs .night-tabs-content {
+display: block; /* Structure */
+font-size: 10pt /* Typography */
+}
+.night-tabs .night-tabs-content > li {
+/* Structure */
+left: 0;
+opacity: 0;
+overflow: auto;
+padding: 1em 1.5em; /* ->>> Spacing for content. <<<-*/
+position: absolute;
+top: 0;
+visibility: hidden;
+width: 100%;
+background: #ecf0f1; /* Colors */
+/* CSS3 */
+-webkit-transform-origin: 0 0;
+-ms-transform-origin: 0 0;
+transform-origin: 0 0;
+-webkit-transition: all .8s .1s; /* ->>> Intensity of tab effects. <<<-*/
+transition: all .8s .1s
+}
+
+@charset "UTF-8";
+
+/**
+ * CONTENTS - effects.css
+ *
+ * GENERAL STYLES
+ * Setup for tab effects.
+ *
+ * SLIDE EFFECTS
+ * Basic slide effects from different directions.
+ *
+ * ADVANCED EFFECTS
+ * Advanced effects (scale, rotate, flip)
+ *
+ */
+
+
+
+
+
+
+
+/*------------------------------------*\
+#GENERAL STYLES
+\*------------------------------------*/
+.night-tabs>.content1:checked~ul>.content1,
+.night-tabs>.content2:checked~ul>.content2,
+.night-tabs>.content3:checked~ul>.content3,
+.night-tabs>.content4:checked~ul>.content4,
+.night-tabs>.content5:checked~ul>.content5,
+.night-tabs>.content6:checked~ul>.content6,
+.night-tabs>.content7:checked~ul>.content7,
+.night-tabs>.content8:checked~ul>.content8,
+.night-tabs>.content9:checked~ul>.content9,
+.night-tabs>.content10:checked~ul>.content10,
+.night-tabs>.content11:checked~ul>.content11 {
+/* Structure */
+opacity: 1;
+visibility: visible;
+/* CSS3 */
+-webkit-transform: none;
+-ms-transform: none;
+transform: none
+}
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------*\
+#SLIDE EFFECTS
+\*------------------------------------*/
+
+
+
+/* ->>> Slide Up <<<-*/
+.night-tabs-animation-slide-up .night-tabs-content > li {
+-webkit-transform: translateY(30px);
+-ms-transform: translateY(30px);
+transform: translateY(30px)
+}
+
+
+
+/* ->>> Slide Down <<<-*/
+.night-tabs-slide-down .night-tabs-content > li {
+-webkit-transform: translateY(-30px);
+-ms-transform: translateY(-30px);
+transform: translateY(-30px)
+}
+
+
+
+/* ->>> Slide Left <<<-*/
+.night-tabs-animation-slide-left .night-tabs-content > li {
+-webkit-transform: translateX(-30px);
+-ms-transform: translateX(-30px);
+transform: translateX(-30px)
+}
+
+
+
+/* ->>> Slide Right <<<-*/
+.night-tabs-animation-slide-right .night-tabs-content > li {
+-webkit-transform: translateX(30px);
+-ms-transform: translateX(30px);
+transform: translateX(30px)
+}
+
+
+
+/* ->>> Slide Up + Left <<<-*/
+.night-tabs-slide-up-left .night-tabs-content > li {
+-webkit-transform: translate(-30px, -30px);
+-ms-transform: translate(-30px, -30px);
+transform: translate(-30px, -30px)
+}
+
+
+
+/* ->>> Slide Up + Right <<<-*/
+.night-tabs-animation-slide-up-right .night-tabs-content > li {
+-webkit-transform: translate(30px, -30px);
+-ms-transform: translate(30px, -30px);
+transform: translate(30px, -30px)
+}
+
+
+
+/* ->>> Slide Down + Left <<<-*/
+.night-tabs-animation-slide-down-left .night-tabs-content > li {
+-webkit-transform: translate(-30px, 30px);
+-ms-transform: translate(-30px, 30px);
+transform: translate(-30px, 30px)
+}
+
+
+
+/* ->>> Slide Down + Right <<<-*/
+.night-tabs-animation-slide-down-right .night-tabs-content > li {
+-webkit-transform: translate(30px, 30px);
+-ms-transform: translate(30px, 30px);
+transform: translate(30px, 30px)
+}
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------*\
+#SLIDE EFFECTS
+\*------------------------------------*/
+
+
+
+/* ->>> Rotate <<<-*/
+.night-tabs-rotate > ul > li {
+-o-transform: rotate(10deg);
+-ms-transform: rotate(10deg);
+-moz-transform: rotate(10deg);
+-webkit-transform: rotate(10deg)
+}
+.night-tabs-animation-rotate.night-tabs.night-tabs-position-vleft > ul > li,
+.night-tabs-animation-rotate.night-tabs.night-tabs-position-vright > ul > li {
+-o-transform: rotate(-10deg);
+-ms-transform: rotate(-10deg);
+-moz-transform: rotate(-10deg);
+-webkit-transform: rotate(-10deg)
+}
+
+
+
+/* ->>> Scale <<<-*/
+.night-tabs-animation-scale > ul > li {
+-webkit-transform: scale(0.6, 0.6);
+-ms-transform: scale(0.6, 0.6);
+transform: scale(0.6, 0.6)
+}
+
+
+
+/* ->>> Flip <<<-*/
+.night-tabs-animation-flip .night-tabs-content {
+-webkit-perspective: 2000px;
+perspective: 2000px;
+-webkit-perspective-origin: 50% 50%;
+perspective-origin: 50% 50%
+}
+.night-tabs-animation-flip .night-tabs-content > li {
+-webkit-transform: rotateX(-90deg);
+transform: rotateX(-90deg)
+}
+.night-tabs-animation-flip.night-tabs-position-vleft > .night-tabs-content > li {
+-webkit-transform: rotateY(90deg);
+transform: rotateY(90deg)
+}
+.night-tabs-animation-flip.night-tabs-position-vright > .night-tabs-content > li {
+-webkit-transform: rotateY(-90deg);
+transform: rotateY(-90deg)
+}
+
+/**
+ * CONTENTS - layouts.css
+ *
+ * HORIZONTAL POSITIONS
+ * Basic horizontal positions: top, left, right, and justify.
+ *
+ * VERTICAL POSITIONS
+ * Basic vertical positions, vertical left and vertical right.
+ *
+ */
+
+
+
+
+
+
+
+/*------------------------------------*\
+#HORIZONTAL POSITIONS
+\*------------------------------------*/
+
+
+
+/* ->>> Left, Center, Right <<<-*/
+.night-tabs-position-left label,
+.night-tabs-position-center label,
+.night-tabs-position-right label {width: auto}
+
+.night-tabs-position-left {text-align: left}
+.night-tabs-position-center {text-align: center}
+.night-tabs-position-right {text-align: right}
+
+
+
+/* ->>> Justified <<<-*/
+.night-tabs-position-justify > input:first-child + label {padding-left: 0}
+.night-tabs-position-justify2 > label {width: 50%}
+.night-tabs-position-justify3 > label {width: 33.33%}
+.night-tabs-position-justify4 > label {width: 25%}
+
+
+
+
+
+
+
+/*------------------------------------*\
+#VERTICAL POSITIONS
+\*------------------------------------*/
+
+
+
+/* ->>> General Styles <<<-*/
+.night-tabs-position-vleft .night-tabs-content > li,
+.night-tabs-position-vright .night-tabs-content > li {border-top: 0}
+
+.night-tabs-position-vleft > label,
+.night-tabs-position-vright > label {
+clear: left;
+display: block;
+float: left;
+margin-right: 0;
+width: 25%
+}
+
+
+
+/* ->>> Vertical Left <<<-*/
+.night-tabs-position-vleft label {border-right: 2px solid #ecf0f1}
+.night-tabs-position-vleft > .night-tabs-content {margin-left: 25%}
+
+
+
+/* ->>> Vertical Right <<<-*/
+.night-tabs-position-vright > label {
+clear: right;
+float: right
+}
+.night-tabs-position-vright ul li { border-right: 1px solid #ecf0f1}
+.night-tabs-position-vright > .night-tabs-content {margin-right: 25%}
+
+.night-tabs-position-vright .night-tabs-content > li {
+-webkit-transform-origin: 100% 0%;
+-ms-transform-origin: 100% 0%;
+transform-origin: 100% 0%
+}
+
+
+/**
+ * CONTENTS - typography.css
+ *
+ * BASIC TYPOGRAPHY
+ * Styles for headings,paragraphs, and links.
+ *
+ * EXTENDED TYPOGRAPHY
+ * Styling for images, unordered and ordered lists, and utility classes.
+ *
+ * GRID SYSTEM
+ * Basic 12 fluid column grid system with offset support.
+ *
+ */
+
+
+
+
+
+
+
+/*------------------------------------*\
+#BASIC TYPOGRAPHY
+\*------------------------------------*/
+
+
+
+/* ->>> Headings <<<-*/
+h1, h2, h3 { margin: 0; padding: 0 }
+
+.night-tabs .night-tabs-content li .h1,
+.night-tabs .night-tabs-content li .h2,
+.night-tabs .night-tabs-content li .h3 {
+font-weight: 300;
+line-height: 1.5
+}
+.night-tabs .night-tabs-content li .h1 {font-size: 3em}
+.night-tabs .night-tabs-content li .h2 {font-size: 2.2em}
+.night-tabs .night-tabs-content li .h3 {font-size: 1.4em}
+
+
+
+/* ->>> Paragraphs <<<-*/
+.night-tabs .night-tabs-content li p {
+margin: .5em 0;
+font-size: 1em
+}
+
+
+
+/* ->>> Links <<<-*/
+.night-tabs .night-tabs-content li a {}
+
+.night-tabs .night-tabs-content li a:hover,
+.night-tabs .night-tabs-content li a:focus {}
+
+
+/* ->>> FontAwesome <<<-*/
+.night-tabs .fa { margin-right: .5em }
+
+
+
+
+
+
+/*------------------------------------*\
+#EXTENDED TYPOGRAPHY
+\*------------------------------------*/
+
+
+
+/* ->>> Images <<<-*/
+.night-tabs .night-tabs-content li img {
+max-width: 100%;
+height: auto
+}
+
+
+
+/* ->>> Lists <<<-*/
+.night-tabs .night-tabs-ordered-list,
+.night-tabs .night-tabs-unordered-list {
+margin-top: .3em;
+padding-left: 2.5em
+}
+.night-tabs .night-tabs-ordered-list {list-style: decimal}
+.night-tabs .night-tabs-unordered-list { list-style: disc}
+
+
+
+/* ->>> Utility <<<-*/
+
+/* Positioning */
+.text-center {text-align: center}
+.text-left {text-align: left}
+.text-right {text-align: right}
+.pull-left {float: left}
+.pull-right {float: right}
+
+
+
+/* Preformatted */
+.dropcap {
+  font-family: "Sanchez", Rockwell, slab-serif;
+	float: left;
+	font-size: 5em;
+	line-height: .9;
+	}
+	
+.blockquote {
+  margin: 1em;
+  padding: 0 0 0 1em;
+  border-left: 0px solid #333
+}
+
+.well {
+background: #333;
+padding: 1em!important
+}
+
+
+
+
+
+
+/*------------------------------------*\
+#GRID SYSTEM
+\*------------------------------------*/
+
+
+
+/* ->>> Micro-Clearfix <<<-*/
+.night-tabs .grid-row:after {
+content: '';
+display: table;
+clear: both
+}
+
+
+
+/* ->>> Basic Structure <<<-*/
+.night-tabs .grid-row {margin-top: 1em}
+.night-tabs .grid-row:first-child {margin-top: 0}
+
+.night-tabs .grid-column {
+display: block;
+float: left;
+width: 100%;
+margin-left: 2%
+}
+.night-tabs .grid-column:first-child { margin-left: 0}
+
+
+
+/* ->>> Grid System Config <<<-*/
+.night-tabs .grid-column-1 {width: 6.5%}
+.night-tabs .grid-column-2 {width: 15%}
+.night-tabs .grid-column-3 {width: 23.5%}
+.night-tabs .grid-column-4 {width: 32%}
+.night-tabs .grid-column-5 {width: 40.5%}
+.night-tabs .grid-column-6 {width: 49%}
+.night-tabs .grid-column-7 {width: 57.5%}
+.night-tabs .grid-column-8 {width: 66%}
+.night-tabs .grid-column-9 {width: 74.5%}
+.night-tabs .grid-column-10 {width: 83%}
+.night-tabs .grid-column-11 {width: 91.5%}
+
+
+.night-tabs .grid-column-offset-1,
+.night-tabs .grid-column-offset-1:first-child{margin-left:8.5%}
+.night-tabs .grid-column-offset-2,
+.night-tabs .grid-column-offset-2:first-child{margin-left:17%}
+
+.night-tabs .grid-column-offset-3,
+.night-tabs .grid-column-offset-3:first-child{margin-left:25.5%}
+
+.night-tabs .grid-column-offset-4,
+.night-tabs .grid-column-offset-4:first-child{margin-left:34%}
+
+.night-tabs .grid-column-offset-5,
+.night-tabs .grid-column-offset-5:first-child{margin-left:42.5%}
+
+.night-tabs .grid-column-offset-6,
+.night-tabs .grid-column-offset-6:first-child{margin-left:51%}
+
+.night-tabs .grid-column-offset-7,
+.night-tabs .grid-column-offset-7:first-child{margin-left:59.5%}
+
+.night-tabs .grid-column-offset-8,
+.night-tabs .grid-column-offset-8:first-child{margin-left:68%}
+
+.night-tabs .grid-column-offset-9,
+.night-tabs .grid-column-offset-9:first-child{margin-left:76.5%}
+
+.night-tabs .grid-column-offset-10,.night-tabs .grid-column-offset-10:first-child{margin-left:85%}
+.night-tabs .grid-column-offset-11,.night-tabs .grid-column-offset-11:first-child{margin-left:93.5%}
+
+/**
+ * CONTENTS - colors.css
+ *
+ * COLORS
+ * Default (Gray/Grey), Red, Blue, Green, Purple, Orange, Yellow, Pink, Brown, Teal, Turquoise.
+ *
+ */
+
+
+
+
+
+
+
+/*------------------------------------*\
+#COLORS
+\*------------------------------------*/
+
+
+/* ->>> Default (Gray/Grey) <<<-*/
+.night-tabs label:hover span span,
+.night-tabs input:checked+label span span,
+.night-tabs-color-default label:hover span span,
+.night-tabs-color-default input:checked+label span span{background: #C2CED1}
+
+
+
+/* ->>> Blue <<<-*/
+.night-tabs-color-blue label:hover span span,
+.night-tabs-color-blue input:checked+label span span {background: #1e8bc3}
+
+
+
+/* ->>> Red <<<-*/
+.night-tabs-color-red label:hover span span,
+.night-tabs-color-red input:checked+label span span {background: #ef4836}
+
+
+
+/* ->>> Green <<<-*/
+.night-tabs-color-green label:hover span span,
+.night-tabs-color-green input:checked+label span span {background: #27ae60}
+
+
+
+/* ->>> Purple <<<-*/
+.night-tabs-color-purple label:hover span span,
+.night-tabs-color-purple input:checked+label span span {background: #9b59b6}
+
+
+
+/* ->>> Orange <<<-*/
+.night-tabs-color-orange label:hover span span,
+.night-tabs-color-orange input:checked+label span span {background: #F9690E}
+
+
+
+/* ->>> Yellow <<<-*/
+.night-tabs-color-yellow label:hover span span,
+.night-tabs-color-yellow input:checked+label span span {background: #a8880a}
+
+
+
+/* ->>> Pink <<<-*/
+.night-tabs-color-pink label:hover span span,
+.night-tabs-color-pink input:checked+label span span {background: #dB0a5b}
+
+
+
+/* ->>> Brown <<<-*/
+.night-tabs-color-brown label:hover span span,
+.night-tabs-color-brown input:checked+label span span {background: #926239}
+
+
+
+/* ->>> Teal <<<-*/
+.night-tabs-color-teal label:hover span span,
+.night-tabs-color-teal input:checked+label span span {background: #008080}
+
+
+
+/* ->>> Turquoise <<<-*/
+.night-tabs-color-turquoise label:hover span span,
+.night-tabs-color-turquoise input:checked+label span span {background: #16a085}
+
+
+/**
+ * CONTENTS - mobile.css
+ *
+ * RESPONSIVE STACKING
+ * Tabs stack on top of each other on mobile devices.
+ *
+ */
+
+
+
+
+
+
+
+/*------------------------------------*\
+#RESPONSIVE STACKING
+\*------------------------------------*/
+@media screen and (max-width: 48em) {
+.night-tabs .grid-column,
+.night-tabs .grid-column:first-child {
+float: none;
+width: 100%;
+margin: 1em 0 0 0
+}
+.night-tabs > label {
+display: block;
+float: none;
+width: 100%;
+padding-right: 0;
+padding-left: 0;
+text-align: left;
+margin: 0
+}
+.night-tabs > .night-tabs-content {
+margin-top: 0;
+margin-right: 0;
+margin-left: 0
+}
+.night-tabs > .night-tabs-content > li {
+-webkit-transform-origin: 50% 0%;
+-ms-transform-origin: 50% 0%;
+transform-origin: 50% 0%
+}
+.night-tabs.night-tabs-animation-flip > ul > li {
+-webkit-transform: rotateX(-90deg);
+transform: rotateX(-90deg)
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+body {
+background: #C2CED1;
+margin-top: 2em
+}
