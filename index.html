@@ -2,7 +2,7 @@
 	<head>
 		<meta http-equiv="Content-Language" content="zh-cn">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title>MaiMai 譜面確認用影片、音源、曲目Collection</title>
+		<title>MaiMai 谱面确认用影片合集</title>
 		<!--link rel="stylesheet" type="text/css" href="style2.css" /-->
 		<!--link rel="stylesheet" type="text/css" href="tab.css" /-->
 		<!--script type="text/javascript" src="slide.js"></script-->
@@ -16,8 +16,19 @@
 		<!-- Bootstrap Material Design -->
 		<link rel="stylesheet" type="text/css" href="dist/css/bootstrap-material-design.css">
 		<link rel="stylesheet" type="text/css" href="dist/css/ripples.min.css">
+
+		<!--debug-->
+		<!--videoplayer -->
+		<link href="//vjs.zencdn.net/5.4.6/video-js.min.css" rel="stylesheet">
+		<script src="//vjs.zencdn.net/5.4.6/video.min.js"></script>
+		<!--debug end -->
+
 		<style>
 		#back-to-top{position:fixed; right:85%;top:80%;}
+		body{font-family:"Roboto",等线,"Times New Roman",Arial;}
+		li{font-size:110%;}
+		p{font-size:110%;}
+		td{font-size: 110%;}
 		</style>
 	</head>
 	<body>
@@ -30,7 +41,7 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		      <a class="navbar-brand" href="javascript:void(0)"><strong>maimai 谱面确认用影片、音源、曲目Collection</strong></a>
+		      <a class="navbar-brand" href="javascript:void(0)"><strong>maimai 谱面确认用影片合集</strong></a>
 		    </div>
 		    <div class="navbar-collapse collapse navbar-warning-collapse">
 		      <ul class="nav navbar-nav">
@@ -46,13 +57,9 @@
 		        <li><a href="#010" target="_self">期间限定</a></li>
 		        <li><a href="#011" target="_self">删除曲</a></li>
 		      </ul>
-		      <form class="navbar-form navbar-left">
-		        <div class="form-group">
-		          <input type="text" class="form-control col-md-8" placeholder="Search">
-		        </div>
-		      </form>
 		      <ul class="nav navbar-nav navbar-right">
-		        <li><a href="javascript:void(0)"><strong>关于</strong></a></li>
+		        <li class="active"><a href="javascript:void(0)">请使用浏览器的页内查找功能</a></li>
+		        <li><a href="./about.html"><strong>关于</strong></a></li>
 		      </ul>
 		    </div>
 		  </div>
@@ -64,12 +71,6 @@
 		</div>
 
 		<div class="container">
-			<div class="alert alert-dismissible alert-info">
-				<button type="button" class="close" data-dismiss="alert">×</button>
-				<h4>请注意：</h4>
-				<p>本站为http://goo.gl/ZANEzq的镜像站，更多信息请点击右上角的关于按钮。</p>
-			</div>
-
 			<div class="jumbotron">
 				<h2 class="h2"><a name="001">POPS</a></h2>
 				<p>21曲</p>
@@ -3373,6 +3374,9 @@
 				</table>
 			</div>
 		</div>
+		<div class="alert alert-dismissible alert-warning">
+			<div align="middle"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="http://www.lynx.im/static/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a>进行许可。</div>
+		</div>
 		<script>
 		jQuery(document).ready(function() {
 		var offset = 250;
@@ -3391,6 +3395,7 @@
 		})
 		});
 		</script>
+
 	</body>
 </html>
 
